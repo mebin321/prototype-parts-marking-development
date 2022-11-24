@@ -1,0 +1,53 @@
+.RelationsTableContainer {
+  position: relative;
+  overflow: auto;
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+.RelationsTable {
+  max-width: 99%;
+  border: 0 none transparent !important;
+}
+
+.EmptyCell {
+  border: 0 none transparent !important;
+  background-color: white;
+}
+
+.HighlightedCell {
+  background-color: #f2f2f2;
+}
+
+.HeaderCell {
+  background-color: #f6f6f6;
+  font-weight: bold;
+  text-align: left !important;
+  vertical-align: middle;
+}
+
+.CheckboxCell {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.FirstRow {
+  top: 0;
+}
+
+.FirstColumn {
+  left: 0;
+}
+
+.Sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+}
+
+.VerticalText {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  transform-origin: center;
+}

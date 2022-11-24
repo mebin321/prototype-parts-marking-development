@@ -1,0 +1,44 @@
+= Prototype Parts Marking Tool Guidelines
+:icons: font
+:sectnums:
+:toc:
+
+== Visual Guidelines
+The goal of visual guidelines is to provide unified look and feel despite front-end development is split to multiple developers.
+
+=== Page Sections
+TBD - horizontal because of mobile devices with small screens
+
+=== Forms
+- Cancel button is on the left and has gray color
+- Submit button is on right and has orange color
+
+=== Item List
+- Items are shown in <Table basic="very"> (from Semantic UI)
+- Selection is done using <Checkbox /> (from Semantic UI)
+- Actions (add, remove, edit ...) are above table
+- Pagination is in the table footer on the left (for more details see <<pagination>>)
+
+Example: see enumeration administration.
+
+==== Item Adding
+- Form that occupies whole content (instead of listed items)
+- Invalid fields are outlined in red color
+- Submit button is disabled while there are some validation issues
+
+Example: see enumeration administration.
+
+[#pagination]
+=== Pagination
+Use Semantic UI Pagination
+
+- Show: first, previous, next, last item button
+- Hide: ellipsis
+
+Example: see enumeration administration.
+
+=== Search
+TBD
+
+=== Messages
+TBD

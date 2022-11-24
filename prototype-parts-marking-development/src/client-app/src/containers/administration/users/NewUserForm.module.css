@@ -1,0 +1,7 @@
+.searchAdUser {
+  display: inline-block;
+}
+
+.searchAdUser input[type="text"]{
+  border-radius: 2px !important;
+}

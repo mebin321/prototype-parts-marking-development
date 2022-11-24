@@ -1,0 +1,8 @@
+.Input {
+  border: none 0;
+  padding: 0 0 0 2px;
+}
+
+.Input:focus {
+  outline: none 0;
+}

@@ -1,0 +1,40 @@
+== Build
+1. Disconnect from the VPN
+2. `...\prototype-parts-marking\src\client-app> npm install`
+3. Connect to VPN
+4. `...\prototype-parts-marking> dotnet cake` 
+
+== DEPLOYMENT
+1. Move  `...\prototype-parts-marking\artifacts\PPMT.zip` to a server
+2. `PPMT.zip` extract to `D:\PPMT`
+3. Copy and replace  `D:\PPMT\appsettings.json` to extracted folder `D:\PPMT\PPMT-1.0.0+xxxxxxx\appsettings.json`
+4. Edit `D:\PPMT\link.bat` for current PPMT commit
+5. Run `D:\PPMT\link.bat`
+6. Check logs
+
+== DB Migration
+
+1. Check current deployed migration in the `_EFMigrationsHistory` table
+2. `...prototype-parts-marking\src\WebApi> dotnet ef migrations script <CurrentDeployedMigration> | clip` 
+3. Create `script.sql` file and paste generated script into it.
+4. Check correctness of script and remove non-sql text.
+5. Move `script.sql` to a server
+6. `...\Program Files\PostgreSQL\12\bin> psql -U postgres -d PPMT-DEV -f [path-of-script-file]`
+
+
+== Release chcek list
+
+* User acceptance testing on test enviroment 
+
+* Update user documentation
+
+* Update toolist
+
+* Update FSM
+
+* Create newsletter
+
+* Agree on the date of shutdown and release with mailto:ladislav.sebo@continental-corporation.com[Sebo Ladislav]
+
+* Create tag for commit which are planned to be deploy, e.g. tag: v1.0.0+877c17b.
+  You can find the version number of application after build in  `...\prototype-parts-marking\artifacts\PPMT-version`

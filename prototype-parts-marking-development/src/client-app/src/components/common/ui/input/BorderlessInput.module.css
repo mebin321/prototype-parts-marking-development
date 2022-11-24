@@ -1,0 +1,9 @@
+.Borderless {
+  border: none transparent;
+  outline: none;
+  background-color: transparent;
+}
+
+.Borderless:focus {
+  outline: none;
+}

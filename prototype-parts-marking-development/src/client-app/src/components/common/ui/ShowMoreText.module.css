@@ -1,0 +1,15 @@
+.LinkButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: inline;
+  font-family: inherit;
+  color: #00000066;
+  margin: 0;
+  padding: 0;
+}
+
+.LinkButton:hover {
+  text-decoration: underline;
+}

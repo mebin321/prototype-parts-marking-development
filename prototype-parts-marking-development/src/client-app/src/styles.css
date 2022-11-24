@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffa500 !important;
+}
+
+a {
+  color: #ffa500;
+}
+
+a:visited {
+  color: #a96504;
+}
+
+a:hover {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+.ui.button.primary {
+  background-color: #ffa500;
+}
+
+.ui.button.primary:hover,
+.ui.button.primary:focus {
+  background-color: #a26900;
+}
+
+.ui.label.simple {
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+
+.ui.pagination.menu
+.active.item {
+  color: #ffa500;
+}
+
+.TableHeaderCell {
+  font-size: 1.5em;
+  color: #ffa500;
+  vertical-align: top;
+}
+
+.TableBodyCell {
+  border-collapse: collapse;
+  border-top: 1px solid rgba(34, 36, 38, 0.15) !important;
+  border-right: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+}
+
+.toast {
+  min-width: 500px;
+}
+
+/* Styling of result elements of search inputs
+which content is bigger than container, it provide
+"..." at the end instead of cutting word in a half */
+.results.transition{
+  max-height: 30em;
+  overflow: auto;
+  width: 100% !important;
+}
+
+.result .content div{
+  width : 100%;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Placeholders visibility for disabled inputs */
+input[disabled].prompt::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black !important;
+}
+input[disabled].prompt::-moz-placeholder { /* Firefox 19+ */
+  color: black !important;
+}
+input[disabled].prompt:-moz-placeholder { /* Firefox 18- */
+  color: black !important;
+}
+input[disabled].prompt:-ms-input-placeholder { /* IE 10+ */
+  color: black !important;
+}
+
+.ui.basic.icon.button{
+  margin-left: 1px;
+}
+
+.ui.disabled.fitted.checkbox{
+  background: rgb(222, 222, 222);
+  border-radius: 3px;
+}
+
+::selection {
+  background-color: rgba(100,100,100,.4);
+  color: rgba(0,0,0,.87);
+}
+
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0,0,0,.25);
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+body ::-webkit-scrollbar-track {
+  background: rgba(0,0,0,.1);
+  border-radius: 0;
+}
+
+.public-DraftEditorPlaceholder-root {
+  color: rgba(34,36,38,.4);
+  position: absolute;
+  z-index: 1;
+  font-weight: normal;
+}
+
+.public-DraftEditorPlaceholder-hasFocus {
+  color: rgba(0,0,0,.6);
+}
+
+.public-DraftEditor-content, .public-DraftEditorPlaceholder-root {
+  padding: .78571429em 1em;
+}
+
+.public-DraftEditor-content {
+  /* font-family: Consolas; */
+  resize: vertical;
+  height: 75px;
+  font-weight: normal;
+  text-align: left;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid rgba(34,36,38,.15);
+  outline: 0;
+  color: rgba(0,0,0,.87);
+  border-radius: .28571429rem;
+  -webkit-box-shadow: 0 0 0 0 transparent inset;
+  box-shadow: 0 0 0 0 transparent inset;
+  -webkit-transition: color .1s ease,border-color .1s ease;
+  transition: color .1s ease,border-color .1s ease;
+  font-size: 1em;
+  line-height: 1.2857;
+  vertical-align: top;
+}
+
+.public-DraftEditor-content:focus {
+  color: rgba(0,0,0,.95);
+  border-color: #85b7d9;
+  border-radius: .28571429rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 0 rgb(34 36 38 / 35%) inset;
+  box-shadow: 0 0 0 0 rgb(34 36 38 / 35%) inset;
+  -webkit-appearance: none;
+}
+
+.format{
+  color: #ffa500;
+  background-color: white !important;
+  font-weight: bold;
+}

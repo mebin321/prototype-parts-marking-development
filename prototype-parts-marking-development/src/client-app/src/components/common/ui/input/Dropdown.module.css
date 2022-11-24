@@ -1,0 +1,8 @@
+.ErrorItem {
+  opacity: 1 !important;
+  color: red !important;
+}
+
+.ErrorItem:hover {
+  background-color: inherit !important;
+}

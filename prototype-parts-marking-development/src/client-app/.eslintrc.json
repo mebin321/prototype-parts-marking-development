@@ -1,0 +1,105 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "react-app",
+        "react-app/jest",
+        "standard",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:react/recommended"
+      ],
+    "globals": {
+        "Atomics": "readonly",
+        "JSX": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "jest",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        // disable unwanted rules from extends and plugins
+        "react/prop-types": "off",
+
+        // disable base eslint rules which are replaced by @typescript-eslint extension
+        "semi": "off",
+        "no-extra-semi": "off",
+        "brace-style": "off",
+        "space-before-function-paren": "off",
+        "no-unused-expressions": "off",
+        "no-unused-vars": "off",
+        "no-redeclare": "off",
+        "no-use-before-define": "off",
+
+        // @typescript-eslint rules
+        // see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
+        "@typescript-eslint/semi": ["warn", "always"],
+        "@typescript-eslint/no-extra-semi": "warn",
+        "@typescript-eslint/member-delimiter-style": "warn",
+        "@typescript-eslint/brace-style": ["warn", "allman", { "allowSingleLine": true }],
+        "@typescript-eslint/space-before-function-paren": ["warn", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-redeclare": ["error", { "builtinGlobals": true }],
+        "@typescript-eslint/no-use-before-define": "error",
+
+        // eslint rules which are not extended in @typescript-eslint
+        "max-len": ["warn", {
+            "code": 120,
+            "tabWidth": 2,
+            "ignoreUrls": true,
+            "ignoreRegExpLiterals": true
+        }],
+        "comma-dangle": ["warn", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+        }],
+        "padding-line-between-statements": ["warn",
+            { "blankLine": "always", "prev": "multiline-block-like", "next": "*" },
+            { "blankLine": "never", "prev": "multiline-block-like", "next": "case" },
+            { "blankLine": "never", "prev": "multiline-block-like", "next": "default" }
+        ],
+        "sort-imports": ["warn", {
+            "ignoreDeclarationSort": true,
+            "allowSeparatedGroups": true
+        }],
+
+        // rules from plugins
+        "import/order": ["warn", {
+            "groups": [
+                "builtin",
+                "external",
+                ["sibling", "parent"],
+                "index",
+                "object"
+            ],
+            "alphabetize": {"order": "asc", "caseInsensitive": true},
+            "newlines-between": "always"
+        }],
+        "react/no-array-index-key": "warn",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
+}
